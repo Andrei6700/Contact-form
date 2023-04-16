@@ -1,0 +1,44 @@
+.Aplicatie {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.name,.text,.email {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 5px;
+  margin: 5% 0;
+  padding: 3px;
+  width: 150px;
+}
+
+.text{
+  height: 50px;
+}
+
+.submit,.check {
+  display:inline-flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.errors{
+  color: red;
+  line-height:10%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-block-start: 10px;
+  font-size:medium ;
+}
+
+.mesaj-urgent{
+  font-size: small;
+}
