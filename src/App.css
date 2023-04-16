@@ -6,6 +6,8 @@
   align-items: center;
   justify-content: center;
   color: white;
+position: relative;
+
 }
 
 .name,.text,.email {
@@ -15,7 +17,7 @@
   border-radius: 5px;
   margin: 5% 0;
   padding: 3px;
-  width: 150px;
+  width: 180px;
 }
 
 .text{

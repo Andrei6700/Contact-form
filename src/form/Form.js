@@ -2,15 +2,14 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 
-    export const Form = () => {
-        
+    export const Form = () => {    
          const schema = yup.object().shape({
             name: yup.string()
                 .max(64,'Maxim 64 de caractere').required('Formular invalid'),
             email: yup.string()
                 .email('Invalid email').required('Formular invalid'),
             message: yup.string()
-                .max(1024,'maxim 1024 de caractere').required('Formular invalid')   
+                .max(1024,'maxim 1024 de caractere').required('Formular invalid')  
         });
 
         const {register, handleSubmit, formState:{errors}} = useForm({
@@ -19,8 +18,6 @@ import * as yup from 'yup'
         const onSubmit = (data) =>{
             console.log(data);
         };
-
-        
 
         return(
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -32,13 +29,37 @@ import * as yup from 'yup'
 
                         <input className="text"  placeholder="Your message" {...register("message")}/>
                         <p className="errors">{errors.message?.message}</p>
-            <div>
+
+
+            <div style={{justifyContent:'space-between',display:'flex'}}>
                 <label style={{ fontSize: '15px' }}>
-                    Mesaj Urgent<input className="check"  type="checkbox"/>
+                    Mesaj Urgent <input className="check"  type="checkbox"/>
                 </label>
                 <input className="submit" type="submit" value="Trimite" />
             </div>
                 
-        </form>
-             )
+          </form>
+            )       
 }
+/*
+   export const bordercolor = (name, email, message, errors) => {
+     if (name != null) {
+      return (
+        <p className="errors">{errors.name?.message}</p>
+      );
+    } 
+     if (email != null) {
+      return (
+        <p className="errors">{errors.email?.message}</p>
+      );
+    } 
+     if (message != null) {
+      return (
+        <p className="errors">{errors.message?.message}</p>
+      );
+
+  };
+
+}
+*/
+  

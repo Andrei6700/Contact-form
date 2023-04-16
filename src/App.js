@@ -1,5 +1,5 @@
 import './App.css';
-import { Form } from "./form/Form";
+import { Form/* , bordercolor*/ } from "./form/Form";
 
 function App() {
 
@@ -12,12 +12,12 @@ function App() {
       };
     };
 
-  return (
-    <div className= "Aplicatie">
-          <p>Contact Us:</p>
-          <Form/>
-      </div>
-  );
+    return (
+      <div className="Aplicatie">
+      <p>Contact Us:</p>
+      <Form />
+    </div>
+    );
 }
 
 export default App;
