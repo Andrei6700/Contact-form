@@ -1,8 +1,7 @@
 import './App.css';
-import { Form/* , bordercolor*/ } from "./form/Form";
+import { Form , bordercolor } from "./form/Form";
 
 function App() {
-
     const user = async (event) =>{
       event.preventDefault();
       let formData = {
