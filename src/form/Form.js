@@ -5,14 +5,14 @@ import * as yup from 'yup'
 
 export const Form = () => {    
          const schema = yup.object().shape({
-            name: yup.string()
+            name: yup.string().matches(/^[^\d]+$/, 'Formular invalid')
                 .max(64,'Maxim 64 de caractere').required('Formular invalid'),
             email: yup.string()
                 .email('Invalid email').required('Formular invalid'),
             message: yup.string()
                 .max(1024,'maxim 1024 de caractere').required('Formular invalid')  
         });
-        const [Urgent, setUrgent] = useState(false);
+        const [isChecked, setIsChecked] = useState(true);
 
 const {register, handleSubmit, formState:{errors}} = useForm({
         resolver: yupResolver(schema)}
@@ -25,15 +25,14 @@ const bordercolor = (input) => {
             return 'black';
         }
 
-        const onSubmit = (data) => {
-            if (Urgent) {
-              console.log(data, "Mesaj Urgent !");
-            } else {
-              console.log(data);
-            }
-          };
-          
-
+const onSubmit = (data) => {
+  if (isChecked) {
+    console.log(data, "Mesaj Urgent !");
+  } else {
+    console.log(data);
+  }
+}
+ 
         return(
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input className="name"  placeholder="Your name"  style={{borderColor: bordercolor('name')}} {...register("name")}/>
@@ -48,7 +47,7 @@ const bordercolor = (input) => {
 
             <div style={{justifyContent:'space-between',display:'flex'}}>
                 <label style={{ fontSize: '15px' }}>
-                Mesaj Urgent <input className="check" checked={Urgent} onChange={(e) => setUrgent(e.target.checked)} type="checkbox"/> 
+                Mesaj Urgent: <input className="check" checked={isChecked} onChange={() => setIsChecked(!isChecked)} type="checkbox"/> 
                 </label>
                 <input className="submit" type="submit" value="Trimite" />
             </div>
