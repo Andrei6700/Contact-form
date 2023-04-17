@@ -19,7 +19,10 @@ const {register, handleSubmit, formState:{errors}} = useForm({
         );
 
 const bordercolor = (input) => {
-        return errors[input] ? 'red' : 'black';
+        if(errors[input])
+            return 'red';
+        else
+            return 'black';
         }
 
         const onSubmit = (data) => {
