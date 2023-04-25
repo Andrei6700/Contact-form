@@ -10,16 +10,18 @@ position: relative;
 }
 
 .Aplicatie {
-  background-color: #09a469;
+  background-color: #ffffff;
   min-height: 45vh;
   min-width: 18em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: rgb(0, 0, 0);
   border-radius: 5%;
   position: relative;
+  box-shadow: 5px 5px 15px #807777, -5px -5px 15px #beacac;
+
 }
 
 .name,.text,.email {
@@ -31,9 +33,7 @@ position: relative;
   padding: 3px;
   width: 180px;
   height: 18px;
-  box-shadow: inset 2px 2px 5px #cccaca, inset -2px -2px 5px #dbdbdb;
-}
-
+  box-shadow: inset 2px 2px 5px #cdd1cf, inset -2px -2px 5px #d8d3d3;};
 .title{
   font-size:xx-large;
 }
