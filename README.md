@@ -2,6 +2,7 @@
 # Form
 
 This is a Form, where the user must enter a name, an email address and a text, where they must correspond to certain characteristics to be validated. The user has a checkbox to know if the message he is entering is an urgent one and when all the data are valid they are entered in the console. This is specially made to be used in React.
+![image](https://user-images.githubusercontent.com/91980199/234413288-793d4b4a-849f-4cbc-b102-3e7e6f55d1a3.png)
 
 ## Install
 Clone the project, enter the project's folder, do: ```npm install``` then ```npm start``` and it's up.
