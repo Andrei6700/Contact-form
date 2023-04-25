@@ -40,7 +40,7 @@ return(
     <input className="email" placeholder="Your email"  style={{borderColor: bordercolor('email')}} {...register("email")}/>
   <p className="errors">{errors.email?.message}</p>
 
-  <input className="text"  placeholder="Your message" style={{borderColor: bordercolor('message')}}{...register("message")}/>
+  <textarea className="text"  placeholder="Your message" style={{borderColor: bordercolor('message')}}{...register("message")}/>
     <p className="errors">{errors.message?.message}</p>
 
   <div style={{justifyContent:'space-between',display:'flex',marginBlockEnd:'40px'}}>
