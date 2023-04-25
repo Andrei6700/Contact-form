@@ -4,7 +4,7 @@ This is a Form, where the user must enter a name, an email address and a text, w
 ## Dependencies
 Excluding React, none.
 
-## Running the example
+## Install
 Clone the project, enter the project's folder, do:
 ```npm install```
 ```npm install react-hook-form-yup```
