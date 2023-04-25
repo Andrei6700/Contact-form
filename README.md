@@ -10,9 +10,9 @@ Clone the project, enter the project's folder, do ```npm install```,```npm insta
 
 ## Features
 * Usage of React Hooks
-* Form Validation using ** Yup **
+* Form Validation using **YUP**
 * Small size and no dependencies
-* Dynamic Styling
+* Dynamic StylingYUP
 
 ## Apply validation
 List of validation rules supported:
@@ -24,11 +24,12 @@ List of validation rules supported:
 
 ```javascript
 const schema = yup.object().shape({
-      name: yup.string().matches(/^[^\d]+$/, 'Formular invalid')
-      .max(64,'Maxim 64 de caractere').required('Formular invalid'),
+   name: yup.string().matches(/^[^\d]+$/, 'Formular invalid')
+    .max(64,'Maxim 64 de caractere').required('Formular invalid'),
       email: yup.string()
-      .email('Invalid email').required('Formular invalid'),
+    .email('Invalid email').required('Formular invalid'),
       message: yup.string()
-      .max(1024,'maxim 1024 de caractere').required('Formular invalid')  
-      });
+    .max(1024,'maxim 1024 de caractere').required('Formular invalid')  
+  }
+);
 ```
