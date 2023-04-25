@@ -12,10 +12,10 @@ function App() {
 
 return (
     <div className="body">
-        <div className="Aplicatie">
-        <p className="title">Contact Us:</p>
-        <Form/>
-        </div>
+     <div className="Aplicatie">
+      <p className="title">Contact Us:</p>
+      <Form/>
+     </div>
     </div>);
 }
 

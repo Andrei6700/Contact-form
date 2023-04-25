@@ -48,7 +48,7 @@ return(
     Mesaj Urgent: <input className="check" checked={isChecked} onChange={() => setIsChecked(!isChecked)} type="checkbox"/> 
   </label>
     <input className="submit" type="submit" value="Trimite" />
-  </div>
+   </div>
   </form>)       
   }
 
