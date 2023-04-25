@@ -31,7 +31,7 @@ const schema = yup.object().shape({
     .max(64,'Maxim 64 de caractere').required('Formular invalid'),
       email: yup.string()
     .email('Invalid email').required('Formular invalid'),
-      message: yup.string()
+      message: yup.string().matches(/^[^\d]+$/, 'Formular invalid')
     .max(1024,'maxim 1024 de caractere').required('Formular invalid')  
   }
 );
