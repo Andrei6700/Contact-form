@@ -37,12 +37,13 @@ return(
   <form onSubmit={handleSubmit(onSubmit)}>
     <input className="name"  placeholder="Your name"  style={{borderColor: bordercolor('name')}} {...register("name")}/>
   <p className="errors">{errors.name?.message}</p>
+
     <input className="email" placeholder="Your email"  style={{borderColor: bordercolor('email')}} {...register("email")}/>
   <p className="errors">{errors.email?.message}</p>
 
   <textarea className="text"  placeholder="Your message" style={{borderColor: bordercolor('message')}}{...register("message")}/>
     <p className="errors">{errors.message?.message}</p>
-
+    
   <div style={{justifyContent:'space-between',display:'flex',marginBlockEnd:'40px'}}>
     <label style={{ fontSize: '15px' }}>
     Mesaj Urgent: <input className="check" checked={isChecked} onChange={() => setIsChecked(!isChecked)} type="checkbox"/> 
