@@ -5,7 +5,11 @@ This is a Form, where the user must enter a name, an email address and a text, w
 Excluding React, none.
 
 ## Running the example
-Clone the project, enter the project's folder, do ```npm install```,```npm install react-hook-form-yup``` and ```npm install @hookform/resolvers``` then npm start and it's up.
+Clone the project, enter the project's folder, do:
+```npm install```
+```npm install react-hook-form-yup```
+```npm install @hookform/resolvers```
+then ```npm start```  and it's up.
 
 ## Features
 * Usage of React Hooks
