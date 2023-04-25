@@ -13,3 +13,22 @@ Clone the project, enter the project's folder, do ```npm install```,```npm insta
 * Form Validation using ** Yup **
 * Small size and no dependencies
 * Dynamic Styling
+
+## Apply validation
+List of validation rules supported:
+* required
+* min
+* max
+* matches
+* validate
+
+```javascript
+const schema = yup.object().shape({
+      name: yup.string().matches(/^[^\d]+$/, 'Formular invalid')
+      .max(64,'Maxim 64 de caractere').required('Formular invalid'),
+      email: yup.string()
+      .email('Invalid email').required('Formular invalid'),
+      message: yup.string()
+      .max(1024,'maxim 1024 de caractere').required('Formular invalid')  
+      });
+```
