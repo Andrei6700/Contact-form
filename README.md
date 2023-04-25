@@ -1,7 +1,6 @@
 # Form
-## 
 
-
+This is a Form, where the user must enter a name, an email address and a text, where they must correspond to certain characteristics to be validated. The user has a checkbox to know if the message he is entering is an urgent one and when all the data are valid they are entered in the console. This is specially made to be used in React.
 ## Dependencies
 Excluding React, none.
 
