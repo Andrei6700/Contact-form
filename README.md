@@ -14,7 +14,6 @@ Clone the project, enter the project's folder, do: ```npm install``` then ```npm
 ## Features
 * Usage of React Hooks
 * Form Validation using **YUP**
-* Small size and no dependencies
 
 ## Apply validation
 List of validation rules used:
