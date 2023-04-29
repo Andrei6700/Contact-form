@@ -6,11 +6,11 @@ import './Form-style.css';
 
 export const Form = () => {
   const schema = yup.object().shape({
-    name: yup.string().matches(/^[^\d]+$/, 'Invalid form')
+    name: yup.string().matches(/^[^\d]+$/, 'Invalid name')
       .max(64, 'Maxim 64 characters').required('Invalid form'),
     email: yup.string()
       .email('Invalid email').required('Invalid form'),
-    message: yup.string().matches(/^[a-zA-Z\s]+$/, 'Invalid form')
+    message: yup.string().matches(/^[a-zA-Z\s]+$/, 'Invalid message')
       .max(1024, 'Maxim 1024 characters').required('Invalid form'),
     urgent: yup.boolean(),
   });
