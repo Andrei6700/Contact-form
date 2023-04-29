@@ -26,12 +26,12 @@ List of validation rules used:
 ```javascript
 export const Form = () => {
   const schema = yup.object().shape({
-    name: yup.string().matches(/^[^\d]+$/, 'Formular invalid')
-      .max(64, 'Maxim 64 de caractere').required('Formular invalid'),
+    name: yup.string().matches(/^[^\d]+$/, 'Invalid form')
+      .max(64, 'Maxim 64 characters').required('Invalid form'),
     email: yup.string()
-      .email('Invalid email').required('Formular invalid'),
-    message: yup.string().matches(/^[a-zA-Z\s]+$/, 'Formular invalid')
-      .max(1024, 'maxim 1024 de caractere').required('Formular invalid'),
+      .email('Invalid email').required('Invalid form'),
+    message: yup.string().matches(/^[a-zA-Z\s]+$/, 'Invalid form')
+      .max(1024, 'Maxim 1024 characters').required('Invalid form'),
     urgent: yup.boolean(),
   });
 ```
