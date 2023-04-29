@@ -4,7 +4,8 @@ This is a Contact form, where the user must enter a name, an email address and a
 
 Here are 2 examples, in the first image all our fields are valid and it displays them in the console, and in the 2nd example the message field is invalid.
 
-![image](https://user-images.githubusercontent.com/91980199/235312970-ee02e6e6-3155-4b63-8976-47d0621f015d.png)
+![Examples](https://user-images.githubusercontent.com/91980199/235313048-8c57e5bf-c59e-407a-a247-659b199234d5.png)
+
 
 
 
