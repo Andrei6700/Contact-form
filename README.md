@@ -4,8 +4,10 @@ This is a Contact form, where the user must enter a name, an email address and a
 
 Here are 2 examples, in the first image all our fields are valid and it displays them in the console, and in the 2nd example the message field is invalid.
 
-![image](https://user-images.githubusercontent.com/91980199/234423262-d956445a-0eb8-44a3-991c-de5bf16160f8.png)
-![image](https://user-images.githubusercontent.com/91980199/234423480-0119a30e-e5d6-405d-8501-9f32a38a6077.png)
+
+![Examples](https://user-images.githubusercontent.com/91980199/235313385-9e616966-ab2b-41dc-af9c-79edf690a9bf.png)
+
+
 
 
 ## Install
@@ -14,7 +16,6 @@ Clone the project, enter the project's folder, do: ```npm install``` then ```npm
 ## Features
 * Usage of React Hooks
 * Form Validation using **YUP**
-* Small size and no dependencies
 
 ## Apply validation
 List of validation rules used:
@@ -25,13 +26,14 @@ List of validation rules used:
 * validate
 
 ```javascript
-const schema = yup.object().shape({
-   name: yup.string().matches(/^[^\d]+$/, 'Formular invalid')
-    .max(64,'Maxim 64 de caractere').required('Formular invalid'),
-      email: yup.string()
-    .email('Invalid email').required('Formular invalid'),
-      message: yup.string().matches(/^[^\d]+$/, 'Formular invalid')
-    .max(1024,'maxim 1024 de caractere').required('Formular invalid')  
-  }
-);
+export const Form = () => {
+  const schema = yup.object().shape({
+    name: yup.string().matches(/^[^\d]+$/, 'Invalid name')
+      .max(64, 'Maxim 64 characters').required('Invalid form'),
+    email: yup.string()
+      .email('Invalid email').required('Invalid form'),
+    message: yup.string().matches(/^[a-zA-Z\s]+$/, 'Invalid message')
+      .max(1024, 'Maxim 1024 characters').required('Invalid form'),
+    urgent: yup.boolean(),
+  });
 ```
