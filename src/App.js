@@ -6,9 +6,9 @@ import { Form } from "./form/Form";
 function App() {
   return (
     <div className="body">
-      <div className="Aplicatie">
+      <div className="Application">
         <p className="title">Contact Us:</p>
-        <Form/>
+        <Form />
       </div>
     </div>
   );
