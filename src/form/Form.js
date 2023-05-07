@@ -8,8 +8,8 @@ import { onSubmit } from "./components/on-submit";
 import { FormData } from './components/form-validation';
 import { useForm } from 'react-hook-form';
 
-export const Form = (data,errors) => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+export const Form = (data) => {
+  const { register, handleSubmit, formState: { errors } } = useForm(data);
   const onSubmit = (data) => console.log(data);
 
     return (

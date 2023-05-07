@@ -12,7 +12,6 @@
     "react-hook-form": "^7.43.9",
     "react-matches": "^0.2.1",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
     "yup": "^1.1.1"
   },
   "scripts": {
@@ -38,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "web-vitals": "^3.3.1"
   }
 }
