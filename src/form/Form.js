@@ -5,17 +5,16 @@ import './Form-style.css';
 import { InputButtons } from "./components/input-button";
 import { InputField } from "./components/input-field";
 import { onSubmit } from "./components/on-submit";
-import { FormData } from './components/form-validation';
+import { FormSubmit } from './components/form-validation';
 import { useForm } from 'react-hook-form';
 
-export const Form = (data) => {
-  const { register, handleSubmit, formState: { errors } } = useForm(data);
-  const onSubmit = (data) => console.log(data);
+export const Form = (onSubmit) => {
+  const { register, handleSubmit, formState: { errors } } = useForm();
 
-    return (
-    <FormData onSubmit = {handleSubmit(onSubmit)} >
-      <InputField register = {register} errors={errors}/>
-      <InputButtons register = {register} />
-    </FormData>
+  return (
+    <FormSubmit onSubmit={handleSubmit(onSubmit)}>
+      <InputField register={register} errors={errors} />
+      <InputButtons register={register} />
+    </FormSubmit>
   )
 }

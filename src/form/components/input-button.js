@@ -1,5 +1,5 @@
 import React from "react";
- 
+
 const LabelProps = ({ register }) => {
   return (
     <label style={{ fontSize: '15px' }}>
@@ -7,7 +7,7 @@ const LabelProps = ({ register }) => {
     </label>)
 }
 
-export const InputButtons = ({register}) => {
+export const InputButtons = ({ register }) => {
   return (
     <div style={{ justifyContent: 'space-between', display: 'flex', marginBlockEnd: '40px' }}>
       <LabelProps register={register} />

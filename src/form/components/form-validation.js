@@ -1,8 +1,9 @@
-import { useForm } from "react-hook-form";
+import React from 'react';
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
+import { useForm } from 'react-hook-form';
 
-export const FormData = () => {
+export const FormSubmit = () => {
   const schema = yup.object().shape({
     name: yup.string().matches(/^[^\d]+$/, 'Invalid name')
       .max(64, 'Maxim 64 characters').required('Invalid form'),
@@ -13,16 +14,16 @@ export const FormData = () => {
     urgent: yup.boolean(),
   });
 
-  const { register , handleSubmit , formState: { errors } } = FormData({
+  const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema)
   });
 
   return (
-    <>
+    <div>
+      {errors}
       {register}
       {handleSubmit}
-      {errors}
-    </>
-  )
+    </div>
+  );
 }
 

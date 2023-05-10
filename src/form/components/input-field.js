@@ -2,7 +2,7 @@
 import React from "react";
 import { bordercolor } from "./color-border";
 
-export const InputField = ({ register, errors }) => {
+export const InputField = (register, errors) => {
   return (
     <div>
       <input className="name" placeholder="Your name" style={bordercolor}
