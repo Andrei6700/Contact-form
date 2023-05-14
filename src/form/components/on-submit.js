@@ -1,5 +1,7 @@
 import React from "react";
 
-export const onSubmit = (data) => {
-  console.log(data);
+export function OnSubmit(data) {
+        return (
+                console.log(data)
+        )
 }

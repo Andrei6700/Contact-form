@@ -1,21 +1,26 @@
-
 import React from "react";
-import { bordercolor } from "./color-border";
 
-export const InputField = (register, errors) => {
-  return (
-    <div>
-      <input className="name" placeholder="Your name" style={bordercolor}
-        {...register("name")} />
-      <p className="errors">{errors.name?.message}</p>
+ export function InputField({register,errors}) {
+  const bordercolor = (input) => {
+    if (errors[input])
+      return 'red';
+    else
+      return 'white';
+   }
 
-      <input className="email" placeholder="Your email" style={bordercolor}
-        {...register("email")} />
+    return(
+      <div>
+        <input className="name" placeholder="Your name" style={{ borderColor: bordercolor('name') }} {...register("name")} />
+        <p className="errors">{errors.name?.message}</p>
+
+        <input className="email" placeholder="Your email" style={{ borderColor: bordercolor('email') }} {...register("email")} />
       <p className="errors">{errors.email?.message}</p>
 
-      <input className="text" placeholder="Your message" style={bordercolor}
-        {...register("message")} />
+      <input className="text" placeholder="Your message" style={{ borderColor: bordercolor('message') }}{...register("message")} />
       <p className="errors">{errors.message?.message}</p>
-    </div>
-  )
-}
+        
+      </div>
+
+    )
+    
+  }

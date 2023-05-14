@@ -8,7 +8,7 @@ function App() {
     <div className="body">
       <div className="Application">
         <p className="title">Contact Us:</p>
-        <Form />
+        <Form/>
       </div>
     </div>
   );
