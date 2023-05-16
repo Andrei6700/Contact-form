@@ -1,14 +1,13 @@
 import React from "react";
-import { InputName } from "./input-name";
-import { InputEmail } from "./input-email";
-import { InputText } from "./input-text";
+import { InputBox } from "./input-box";
+
 
 export function InputField ({ register, errors }) {
   return (
     <div>
-      <InputName  register={register} errors={errors}/>
-      <InputEmail register={register} errors={errors}/>
-      <InputText  register={register} errors={errors}/>
+      <InputBox register={register} errors={errors} id={'name'}/>
+      <InputBox register={register} errors={errors} id={'email'}/>
+      <InputBox register={register} errors={errors} id={'message'}/>
     </div>
   )
 }

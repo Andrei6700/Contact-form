@@ -1,5 +1,5 @@
 .name,
-.text,
+.message,
 .email {
   display: flex;
   justify-content: center;
@@ -17,7 +17,7 @@
   font-size: xx-large;
 }
 
-.text {
+.message {
   height: 50px;
 }
 
