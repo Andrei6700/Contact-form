@@ -7,7 +7,8 @@
   border-radius: 5px;
   margin: 5% 0;
   padding: 3px;
-  width: -moz-available;  
+  width: -webkit-fill-available;
+  width: -moz-available ;
   height: 18px;
   box-shadow: inset 2px 2px 5px #cdd1cf, inset -2px -2px 5px #d8d3d3;
 }
