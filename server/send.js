@@ -4,16 +4,16 @@ const nodemailer = require("nodemailer");
 const transporter = nodemailer.createTransport({
    service: "gmail",
    auth: {
-      user: "andreibalanoiu67@gmail.com",
+      user: "",
       pass: ""
    }
 });
 
 const mailOptions = {
-   from: "andreibalanoiu67@gmail.com",
-   to: "nicolaeandrei.balanoiu@ulbsibiu.ro",
-   subject: "Mesaj",
-   text: "Ba ce fain ii asta sa ma bata hamesterii"
+   from: "",
+   to: "",
+   subject: "",
+   text: ""
 };
 
 transporter.sendMail(mailOptions, function(error, info){
