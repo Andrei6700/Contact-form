@@ -6,10 +6,10 @@ let app = express();
 const path = require('path');
 const router = express.Router()
 
+const port = 4000;
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({ extended: false }),bodyParser.json());
 
 let transporter = nodemailer.createTransport({
     host: "smtp.ethereal.email",
@@ -21,48 +21,32 @@ let transporter = nodemailer.createTransport({
     },
 });
 
-app.post('/mail', (req, res, next) => {
-    var name = req.body.name
-    var email = req.body.email
-    var message = req.body.message
-    var urgent = req.body.telefon
+app.post('/mail', async(req, res) => {
+    const {name,email,message,urgent} = req.body;
 
+    const msg = {
+        from: 'Message From Contact Form',
+        to: 'andreibalanoiu67@gmail.com',
+        subject: 'Data from Form',
+        text: `
+            Name: ${name}
+            Email: ${email}
+            Message: ${message}
+            Urgent: ${urgent}
+        `
+    };
 
-    const mailOptions = {
-        from: `Message From Contact Form `,
-        to: `andreibalanoiu67@gmail.com`,
-        subject: "Data from Form",
-        Text: ` 
-        Name: ${name}
-        Email:${email}
-        Message: ${message}
-        Urgent: ${urgent}
-            `
-    }
+    try {
+        const info = await transporter.sendMail(msg);
 
-    transporter.sendMail(mailOptions, (err, data) => {
-        if (err) {
-            res.json({
-                status: "error"
-            })
-            console.log(err)
-        }
-        else {
-            res.json({
-                status: "success"
-            })
-            console.log("Email Sent" + data.response)
-        }
-    })
-})
+        console.log('Message sent: %s', info.messageId);
+        console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
-transporter.verify(function (error, success) {
-    if (error) {
-        console.log(error);
-    } else {
-        console.log("Server is ready to take our messages!");
+        res.send('Email Sent!');
+    } catch (error) {
+        console.error('Error occurred while sending email:', error);
+        res.status(500).send('Error occurred while sending email');
     }
 });
 
-const PORT = process.env.PORT || 4000
-app.listen(PORT, () => console.info(`server has started on ${PORT}`))
+app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));

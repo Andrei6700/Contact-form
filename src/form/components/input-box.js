@@ -10,7 +10,7 @@ export const InputBox = ({ id, register, errors }) => {
 
   return (
     <div>
-      <input id={id} className={id} placeholder={`Your ${id}`} style={{ borderColor: bordercolor(id) }} {...register(id)} />
+      <input id={id} className={id}  placeholder={`Your ${id}`} style={{ borderColor: bordercolor(id) }} {...register(id)} />
       <p id={id} className="errors">{errors[id]?.message}</p>
     </div>
 
