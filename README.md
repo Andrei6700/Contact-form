@@ -7,11 +7,11 @@ The last image shows the message, with the data entered by the user.
 
 ![image](https://github.com/Andrei6700/Contact-form/assets/91980199/2a05bfea-f930-4ae9-b832-45837e19d356)
 
-#
+
 ## Install
 Clone the project, enter the project's folder, do: ```npm install``` then ```npm start``` and it's up.
 
-#
+
 ## Start
 Before to start this repo, you need to change the config.js :
 ```javascript
@@ -23,13 +23,12 @@ module.exports = {
 After you change the config.js you need to open 2 terminals:
  In the first terminal you will write ```npm start``` which will start the frontend and in secondary terminal you need to be in  backend directory and run  `npm node.js`, which will start the backend.
 
-# 
+#
 ## Features
 * Usage of React Hooks
 * Form Validation using **YUP**
-* Sending messages
+* send a message with the entered data
 
-# 
 ## Apply validation
 List of validation rules used:
 * required
@@ -50,13 +49,14 @@ export const Form = () => {
     urgent: yup.boolean(),
   });
 ```
-# 
+
 ## Built With
 * [React](https://reactjs.org/) - Front-end framework
 * [Node.js](https://nodejs.org/en/) - Back-end framework
 * [Express](https://expressjs.com/) - Back-end framework
-* [React Bootstrap](https://react-bootstrap.github.io/) - Front-end framework
 * [Axios](https://github.com/axios/axios) - Back-end framework
 * [Nodemailer](https://nodemailer.com/about/) - Back-end framework
+* [Yup](https://github.com/jquense/yup) - Form validation
+
 
  
