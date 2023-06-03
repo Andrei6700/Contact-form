@@ -22,11 +22,12 @@ let transporter = nodemailer.createTransport({
 });
 
 app.post('/mail', async(req, res) => {
-    const {name,email,message,urgent} = req.body;
+    console.log(req.body);
+    const { name, email, message, urgent } = req.body;
 
     const msg = {
-        from: 'Message From Contact Form',
-        to: 'andreibalanoiu67@gmail.com',
+        from: '"Test" <test@gmail.com>',
+        to: 'sevafa4757@rockdian.com', 
         subject: 'Data from Form',
         text: `
             Name: ${name}

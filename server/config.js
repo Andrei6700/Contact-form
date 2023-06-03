@@ -1,7 +1,8 @@
 
 module.exports = {
     auth: {
-      user: "",
-      pass: ""
+      //https://ethereal.email/
+      user: "gracie.abbott@ethereal.email",
+      pass: "GhcAJ8Bhqf91yzgXXR"
     }
   };
