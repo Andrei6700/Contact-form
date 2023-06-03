@@ -10,7 +10,7 @@ export const Form = () => {
   const { register, handleSubmit, errors } = useFormData();
   
   return (
-<form onSubmit={handleSubmit(OnSubmit)} action="http://localhost:4000/mail" method="POST" form={true.toString()}>
+<form onSubmit={handleSubmit(OnSubmit)}>
       <InputField register={register} errors={errors} />
       <InputButtons register={register} />
     </form>
