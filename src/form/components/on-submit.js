@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 export const OnSubmit = (data) => {
+  console.log(data)
   axios.post('http://localhost:3002/send', data)
     .then(response => {
       console.log(response.data);
