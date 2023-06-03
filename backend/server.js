@@ -6,6 +6,7 @@ const creds = require('./config');
 const bodyParser = require('body-parser');
 
 const app = express()
+
 const transport = {
     host: "smtp.ethereal.email",
     port: 587,
@@ -16,6 +17,7 @@ const transport = {
     }
 }
 const transporter = nodemailer.createTransport(transport)
+
 transporter.verify((error, success) => {
     if (error) {
         console.log(error);
@@ -24,6 +26,7 @@ transporter.verify((error, success) => {
     }
 });
 app.use(bodyParser.urlencoded({ extended: true }));
+
 router.post('/send', (req, res) => {
     const { name, email, message, urgent } = req.body;
     const content = `name: ${name} \n email: ${email} \n message: ${message}\n  Urgent: ${urgent} `
@@ -38,6 +41,7 @@ router.post('/send', (req, res) => {
         Urgent: ${urgent}
     `
     }
+
     transporter.sendMail(mail, (error, data) => {
         if (error) {
             console.error('Error occurred while sending email:', error);
@@ -57,8 +61,7 @@ app.use('/', router);
 
 const port = 3002;
 
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+app.listen(port, () => {console.log(`Example app listening at http://localhost:${port}`);
 });
 
 
