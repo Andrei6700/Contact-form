@@ -1,5 +1,5 @@
-import './App.css';
-import './form/Form-style.css';
+import "./App.css";
+import "./form/Form-style.css";
 
 import { Form } from "./form/Form";
 
@@ -8,7 +8,7 @@ function App() {
     <div className="body">
       <div className="Application">
         <p className="title">Contact Us:</p>
-        <Form/>
+        <Form />
       </div>
     </div>
   );
